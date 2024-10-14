@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+}
+header{
+    display: flex;
+    height: 70px;
+    background-color: rgb(252, 223, 231);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+.logo{
+    height: flex;
+    align-items: center;
+}
+
+.img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+nav{
+    max-width: 100%;
+    margin: auto;
+    background-color: pink;
+    font-size: 18px;
+    margin-top: 0%;
+    font-weight: 600;
+    padding-right: 10px;
+}
+/*codigos de estrutura de menu horizontal(aunque en estos codigos son para el box)*/
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+/*estrctura estetica de menu horizontal,sin tocar el fondo del box*/
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color:rgb(207, 40, 90);
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color: #ff9da1;
+}
+/*codigos de menu vertical para dar estilo y medidas*/
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100px;
+    background-color: rgb(252, 223, 231);
+
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+    width: 1000px;
+}
+.menu-vertical li:hover{
+    background-color:rgb(252, 223, 231);
+}
+.menu-vertical li a{
+    display: block;
+    color:rgb(207, 40, 90);
+    padding: 15px 15px 15px ;
+}
+
+header {
+    background-color: rgb(255, 178, 191);
+    color:  rgb(207, 40, 90);
+    padding: 10px 0;
+    align-items: center;
+}
+
+section {
+    background-color: #fff;
+    font-size: 26px;
+    margin: 70px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 14px red;
+}
+
+/* Pie de página */
+footer {
+    background-color: rgb(207, 40, 90);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-width: 40px;
+    height: auto;
+}
+
+.contacto {
+    text-align: center;
+}
+
+.contacto p {
+    margin: 5px 0;
+}
+
+/* Estilos responsive */
+
+/* Para pantallas menores de 768px (tabletas y móviles en paisaje) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-horizontal > li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        margin: 20px;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .logo {
+        margin-bottom: 10px;
+    }
+}
+
+/* Para pantallas menores de 480px (móviles pequeños) */
+@media (max-width: 480px) {
+    nav {
+        font-size: 14px;
+    }
+
+    .menu-horizontal {
+        font-size: 14px;
+    }
+
+    section {
+        margin: 10px;
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .menu-vertical {
+        width: 100%;
+    }
+}

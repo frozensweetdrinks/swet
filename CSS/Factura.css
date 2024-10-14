@@ -1,0 +1,734 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaaaaa;
+    margin: 3rem;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+}
+
+.logo{
+    height: flex;
+    align-items: center;
+}
+
+.img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+nav{
+    width: 100%;
+    margin: auto;
+    background-color: pink;
+    font-size: 18px;
+    margin-top: 0%;
+    font-weight: 600;
+    padding-right: 10px;
+}
+/*codigos de estrutura de menu horizontal(aunque en estos codigos son para el box)*/
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+/*estrctura estetica de menu horizontal,sin tocar el fondo del box*/
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color:rgb(207, 40, 90);
+    text-decoration: none;
+}
+
+.menu-horizontal > li:hover{
+    background-color: rgb(252, 223, 231);
+}
+/*codigos de menu vertical para dar estilo y medidas*/
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100px;
+    background-color: rgb(252, 223, 231);
+
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+    width: 1000px;
+}
+.menu-vertical li:hover{
+    background-color:rgb(252, 223, 231);
+}
+.menu-vertical li a{
+    height: 20px;
+    display: block;
+    color: rgb(207, 40, 90);
+    padding: 15px 15px 15px ;
+}
+
+header {
+    background-color: rgb(255, 178, 191);
+    color:  rgb(207, 40, 90);
+    padding: 10px 0;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.center-img {
+    border-radius: 1.5rem;
+    border: 0.1rem solid #ff9da1;
+    box-shadow: 4px 4px 100px rgb(207, 40, 90), -4px -4px 100px rgb(207, 40, 90);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.center-img:hover {
+    transform: scale(1.02);
+}
+
+
+.box-0 {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+    background: rgb(237, 133, 150);
+    box-shadow: 4px 4px 100px rgb(255, 134, 152), -4px -4px 100px rgb(243, 116, 135);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-0:hover {
+    box-shadow: 4px 4px 100px rgb(255, 134, 152), -4px -4px 100px rgb(243, 116, 135);
+}
+
+.invoice-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    align-items: center;
+
+}
+
+.brand-info h1 {
+    color: #ff9da1;
+}
+
+.brand-info p {
+    margin: 0;
+    color:#ff9da1;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "product1 product2 product3"
+        "product4 product5 product6"
+        "invoice invoice invoice";
+    gap: 2rem;
+    padding: 80px;
+}
+
+.products {
+    display: contents;
+}
+
+.product {
+    grid-area: auto;
+    background-color: rgb(212, 117, 144);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.7), -4px -4px 20px rgba(176, 85, 99, 0.7);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.9), -4px -4px 20px rgba(176, 85, 99, 0.9);
+    transform: scale(1.05);
+}
+
+.interactive-image {
+    max-width: 100%;
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.6), -4px -4px 20px rgba(176, 85, 99, 0.6);
+    border: 0.1rem solid rgb(236, 126, 145);
+    border-radius: 0.9rem;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-name {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: -2px 2px 6px rgba(110, 101, 103, 0.842);
+    color: #a30f43;
+}
+
+.product-price {
+    display: block;
+    color: #d6306a;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.add-to-cart {
+    background-color: #d6306a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.5), -4px -4px 20px rgba(176, 85, 99, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.add-to-cart:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.7), -4px -4px 20px rgba(176, 85, 99, 0.7);
+    background-color: #c2185b;
+}
+
+.add-to-cart:active {
+    transform: scale(0.9);
+    box-shadow: 4px 4px 20px rgba(135, 51, 64, 0.842), -4px -4px 20px rgb(135, 51, 64, 0.842);
+
+
+}
+
+.product-price {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-shadow: -2px 2px 6px rgba(110, 101, 103, 0.842);
+    color: #d6306a;
+}
+
+/* Estilo para el contenedor de la factura */
+#invoice {
+    grid-area: invoice;
+    background-color: rgb(242, 130, 149);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 50px rgba(176, 85, 99, 0.7), -4px -4px 50px rgba(176, 85, 99, 0.7);
+    width: 75%;
+    margin-inline: 10.5%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#invoice:hover {
+    box-shadow: 4px 4px 50px rgba(135, 51, 64, 0.800), -4px -4px 50px rgba(135, 51, 64, 0.800);
+    transform: scale(1.02);
+}
+
+#invoice h2,
+#invoice h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    text-shadow: -2px 2px 3px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: -2px 2px 3px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+.S {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: -2px 2px 5px rgb(131, 46, 67);
+    color: pink;
+}
+
+.H {
+    font-size: 1.5em;
+    text-shadow: -2px 2px 5px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+
+.E {
+    font-size: 1.4em;
+    text-shadow: -2px 2px 5px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+
+.F {
+    font-size: 1.2em;
+    text-shadow: -2px 2px 5px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+.C {
+    font-size: 1.1em;
+    text-shadow: -2px 2px 5px rgb(131, 46, 67);
+    color: pink;
+}
+
+/* Total de la factura */
+#invoice-total {
+    font-size: 1.2em;
+    text-shadow: -2px 2px 6px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+/* Estilos para inputs */
+.input {
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 1em;
+    width: 100%;
+    color: whitesmoke;
+    background-color: rgb(223, 105, 125);
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: pink;
+}
+
+.input:focus {
+    background: rgb(171, 100, 111);
+    color: rgb(235, 198, 198);
+    border: 0.2rem solid rgb(228, 120, 138);
+    transform: scale(1.01);
+}
+
+/* Estilos para el botón de enviar factura */
+#send-invoice-button {
+    background-color: #d6306a;
+    color: pink;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 35%;
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.5), -4px -4px 20px rgba(176, 85, 99, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+#send-invoice-button:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.7), -4px -4px 20px rgba(176, 85, 99, 0.7);
+    background-color: #c2185b;
+}
+
+
+#send-invoice-button:active {
+    transform: scale(0.9);
+    background-color: #8f1848d6;
+    box-shadow: 4px 4px 20px rgba(135, 51, 64, 0.842), -4px -4px 20px rgb(135, 51, 64, 0.842);
+}
+
+/* Estilos para los botones generales */
+button {
+    background-color: #d6306a;
+    color: pink;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 1px 0;
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.5), -4px -4px 20px rgba(176, 85, 99, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.7), -4px -4px 20px rgba(176, 85, 99, 0.7);
+    background-color: #c2185b;
+}
+
+
+button:active {
+    transform: scale(0.9);
+    background-color: #8f1848d6;
+    box-shadow: 4px 4px 20px rgba(135, 51, 64, 0.842), -4px -4px 20px rgb(135, 51, 64, 0.842);
+}
+
+
+
+.Gap {
+    display: flex;
+    gap: 14rem;
+}
+
+/* Estilos para el botón de vaciar carrito */
+#clear-cart-button {
+    width: 35%;
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.5), -4px -4px 20px rgba(176, 85, 99, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#clear-cart-button:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.7), -4px -4px 20px rgba(176, 85, 99, 0.7);
+    background-color: #c2185b;
+}
+
+#clear-cart-button:active {
+    transform: scale(0.9);
+    background-color: #8f1848d6;
+    box-shadow: 4px 4px 20px rgba(135, 51, 64, 0.842), -4px -4px 20px rgb(135, 51, 64, 0.842);
+}
+
+/* Alineación del carrito */
+#invoice-items li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Alineación de botones a la derecha */
+#invoice-items li button {
+    margin-left: auto;
+    /* Mueve los botones hacia la derecha */
+}
+
+
+/* Estilos para la alerta personalizada */
+.custom-alert {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #b60f52bd;
+    color: pink;
+    font-size: 1.4em;
+    text-shadow: -2px 2px 5px rgb(95, 87, 89);
+    padding: 20px;
+    border: 0.1rem solid #e27c86;
+    border-radius: 5px;
+    box-shadow: 2px 2px 50px rgb(179, 49, 82), -2px -2px 50px rgb(179, 49, 82);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    display: none;
+    /* Oculto por defecto */
+}
+
+.custom-alert.show {
+    display: block;
+    /* Mostrar cuando se activa */
+}
+
+
+.custom-alert button {
+    margin-top: 10px;
+    padding: 8px 13px;
+    background-color: #a0194f;
+    text-shadow: -2px 2px 5px rgb(95, 87, 89);
+    color: pink;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.5), -4px -4px 20px rgba(176, 85, 99, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+
+.custom-alert button:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 20px rgba(176, 85, 99, 0.7), -4px -4px 20px rgba(176, 85, 99, 0.7);
+    background-color: #8f1848d6;
+}
+
+
+.custom-alert button:active {
+    transform: scale(0.9);
+    background-color: #8f1848d6;
+    box-shadow: 4px 4px 20px rgba(135, 51, 64, 0.842), -4px -4px 20px rgb(135, 51, 64, 0.842);
+}
+
+
+/* Responsividad para pantallas medianas (hasta 1180px) */
+@media (max-width: 1180px) {
+
+    html {
+        font-size: 69.5%;
+    }
+
+    body {
+        margin: 2rem;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem;
+    }
+
+    main {
+        padding: 40px;
+        grid-template-areas:
+            "product1 product2"
+            "product3 product4"
+            "product5 product6"
+            "invoice invoice";
+        gap: 4rem;
+    }
+
+
+
+    .Gap {
+        display: flex;
+        gap: 16rem;
+    }
+
+}
+
+
+#invoice h2,
+#invoice h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    text-shadow: -2px 2px 3px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+h1 {
+    text-shadow: -1px 1px 4px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+.S {
+    font-weight: bold;
+    text-shadow: -1px 1px 5px rgb(131, 46, 67);
+    color: pink;
+}
+
+.H {
+
+    text-shadow: -1px 1px 5px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+
+.E {
+    text-shadow: -1px 1px 5px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+
+.F {
+    text-shadow: -1px 1px 5px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+.C {
+    text-shadow: -1px 1px 5px rgb(131, 46, 67);
+    color: pink;
+}
+
+/* Total de la factura */
+#invoice-total {
+    text-shadow: -1px 1px 6px rgb(95, 87, 89);
+    color: #d6306a;
+}
+
+/* Responsividad para pantallas de tablet (hasta 768px) */
+@media (max-width: 768px) {
+
+    html {
+        font-size: 48.5%;
+    }
+
+    main {
+        grid-template-areas:
+            "product1"
+            "product2"
+            "product3"
+            "product4"
+            "product5"
+            "product6"
+            "invoice";
+        gap: 5rem;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .product-name {
+        font-size: 16px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+
+
+    .Gap {
+        display: flex;
+        gap: 19.7rem;
+    }
+
+    #invoice {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+
+    #invoice h2,
+    #invoice h3 {
+        font-weight: 600;
+        text-shadow: 1px 1px 2.2px rgb(95, 87, 89);
+        color: #d6306a;
+    }
+
+
+
+    h1 {
+        text-shadow: 1px 1px 1.8px rgb(95, 87, 89);
+        color: #d6306a;
+    }
+
+    .S {
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgb(131, 46, 67);
+        color: pink;
+    }
+
+    .H {
+
+        text-shadow: 1px 1px 2px rgb(95, 87, 89);
+        color: #d6306a;
+    }
+
+
+    .E {
+        text-shadow: 1px 1px 2px rgb(95, 87, 89);
+        color: #d6306a;
+    }
+
+
+    .F {
+        text-shadow: 1px 1px 2px rgb(95, 87, 89);
+        color: #d6306a;
+    }
+
+    .C {
+        text-shadow: 1px 1px 2px rgb(131, 46, 67);
+        color: pink;
+    }
+
+    /* Total de la factura */
+    #invoice-total {
+        text-shadow: -1px 1px 4px rgb(95, 87, 89);
+        color: #d6306a;
+    }
+
+}
+
+/* Responsividad para pantallas pequeñas (hasta 468px) */
+@media (max-width: 468px) {
+
+    body {
+        margin: 1.8rem;
+    }
+
+    .box-0 {
+        max-width: 90%;
+        /* Ajustar ancho máximo del contenedor */
+        min-width: 90%;
+        /* Asegurarse de que el contenedor ocupe todo el ancho */
+        padding: 1.5rem;
+        margin: 0 auto;
+        /* Centrar el contenedor */
+    }
+
+    main {
+        padding: 5px;
+        grid-template-areas:
+            "product1"
+            "product2"
+            "product3"
+            "product4"
+            "product5"
+            "product6"
+            "invoice";
+        gap: 3rem;
+        /* Reducir el espacio entre elementos */
+    }
+
+
+    .Gap {
+        display: flex;
+        gap: 10rem;
+    }
+
+    .product {
+        padding: 10px;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 12px;
+    }
+
+    #invoice {
+        width: 90%;
+        padding: 8px;
+        margin: 0 auto;
+        /* Centrar el formulario */
+    }
+
+    .add-to-cart {
+        padding: 8px 12px;
+    }
+
+    .invoice-header {
+        padding: 1.5rem;
+    }
+
+    /* Ajustes adicionales para cuando se muestra el formulario */
+    .invoice-form {
+        max-width: 100%;
+        /* Asegurarse que no se desborde del contenedor */
+        padding: 10px;
+        margin: 0 auto;
+        /* Centrar el formulario */
+    }
+
+    /* Evitar que los botones se salgan del contenedor */
+    .remove-item,
+    .add-item {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
+}

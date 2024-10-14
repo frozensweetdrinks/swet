@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(250, 224, 228);
+}
+
+header {
+    display: flex;
+    height: 70px;
+    background-color: rgb(252, 223, 231);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    max-width: 100%;
+    margin: auto;
+    background-color: pink;
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px red;
+}
+
+.drink-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.drink-item img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.drink-info {
+    flex: 1;
+}
+
+.drink-info h2 {
+    margin-top: 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #cc0000; /* Color rojo para el precio */
+}
+
+/* Estructura de menú horizontal */
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-horizontal > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: rgb(207, 40, 90);
+    text-decoration: none;
+}
+
+.menu-horizontal > li:hover {
+    background-color: #ff9da1;
+}
+
+/* Estructura de menú vertical */
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100px;
+    background-color: rgb(252, 223, 231);
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+    width: 1000px;
+}
+
+.menu-vertical li:hover {
+    background-color: rgb(252, 223, 231);
+}
+
+.menu-vertical li a {
+    display: block;
+    color: rgb(207, 40, 90);
+    padding: 15px 15px 15px;
+}
+
+header {
+    background-color: rgb(255, 178, 191);
+    color: rgb(207, 40, 90);
+    padding: 10px 0;
+    align-items: center;
+}
+
+section {
+    padding: 20px;
+    background-color: rgb(252, 223, 231);
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgb(207, 40, 90);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+}
+
+.contacto {
+    text-align: center;
+}
+
+.contacto p {
+    margin: 5px 0;
+}
+
+/* Estilos para pantallas responsivas */
+
+/* Para pantallas menores de 768px (tabletas y móviles en paisaje) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        font-size: 16px;
+        padding-right: 0; /* Elimina padding en móviles */
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        align-items: center; /* Centra los elementos */
+    }
+
+    .menu-horizontal > li > a {
+        padding: 10px 15px; /* Reduce el padding */
+    }
+
+    main {
+        padding: 15px; /* Reduce padding en main */
+    }
+
+    .drink-item {
+        flex-direction: column; /* Cambia a columna en dispositivos pequeños */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .drink-item img {
+        width: 100%; /* Imagen ocupa el 100% en pantallas pequeñas */
+        max-width: 150px; /* Mantiene un ancho máximo */
+        margin-bottom: 10px; /* Espaciado en la parte inferior */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra los elementos */
+    }
+}
+
+/* Para pantallas menores de 480px (móviles pequeños) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Reduce el tamaño del título */
+    }
+
+    .price {
+        font-size: 14px; /* Reduce el tamaño del precio */
+    }
+
+    .drink-info h2 {
+        font-size: 18px; /* Reduce el tamaño del encabezado */
+    }
+
+    nav {
+        font-size: 14px; /* Reduce el tamaño de fuente del nav */
+    }
+
+    .footer-content {
+        margin-top: 10px; /* Espaciado adicional en el footer */
+    }
+
+    .contacto p {
+        font-size: 14px; /* Reduce el tamaño de fuente del contacto */
+    }
+}

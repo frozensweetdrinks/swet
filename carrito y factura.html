@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTURA Y CARRITO</title>
+    <link rel="stylesheet" href="CSS/STYLE.CARRITO Y FACTURA.css">
+    </body>
+
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" target="_blank">
+            <center><img src="img/descarga (2).png" alt="logo" width="250px"; height="250px"></center>
+        </a>
+        <ul class="menu-horizontal" width="100px">
+      <li> 
+            <a href="">Conoce más sobre nosotros</a>
+         <ul class="menu-vertical">
+            <li><a href="historia.html">Nuestra historias</a></li>
+            <li><a href="mision y vision.html">Visión y misión</a></li>
+          </ul>
+        </li> 
+            <li>
+                <a href="#">Menú</a>
+                    <ul class="menu-vertical">
+                        <li><a href="bebidas.html">Bebidas frias</a></li>
+                        <li><a href="galleta.html">Galletas</a></li>
+                        <li><a href="sandwhic.html">Sandwiches</a></li>
+                    </ul>
+            <li> 
+                <a href="ubicacion.html">Nuestra Ubicacion</a>
+               </li>
+               <li>
+                <a href="promociones.html">Promociones</a>
+               </li>
+            <a href="carrito y factura.html" class="social-what"><img src="img/Carro.png" width="40px" height="40px"></a>
+        </ul>
+    </nav>
+<br>
+<br>
+        <main>
+            <section class="products">
+                <div class="product">
+                    <img src="img/fresa-finl.jpg" alt="img.jpeg" class="interactive-image">
+                    <div class="product-info">
+                        <span class="product-name">Strawberry Kitty</span>
+                        <span class="product-price">$2.00</span>
+                        <button class="add-to-cart" data-price="2.00">
+                            <p class="S">Agregar a la factura</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="img/uva-final.jpg" alt="img.jpeg" class=" interactive-image">
+                    <div class="product-info">
+                        <span class="product-name">Grap Kuromi</span>
+                        <span class="product-price">$2.00</span>
+                        <button class="add-to-cart" data-price="2.00">
+                            <p class="S">Agregar a la factura</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="img/sandia-final.jpg" alt="img.jpeg" class="interactive-image">
+                    <div class="product-info">
+                        <span class="product-name"> My Melody Sandi</span>
+                        <span class="product-price">$2.00</span>
+                        <button class="add-to-cart" data-price="2.00">
+                            <p class="S">Agregar a la factura</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="img/sanrio-final.jpg" alt="img.jpeg" class="interactive-image">
+                    <div class="product-info">
+                        <span class="product-name"> Sanrio Coffee</span>
+                        <span class="product-price">$2.00</span>
+                        <button class="add-to-cart" data-price="2.00">
+                            <p class="S">Agregar a la factura</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="product">
+                    <img src="img/sand-final.jpg" alt="img.jpeg" class="interactive-image">
+                    <div class="product-info">
+                        <span class="product-name">Chicken Sandwich</span>
+                        <span class="product-price">$1.00</span>
+                        <button class="add-to-cart" data-price="1.00">
+                            <p class="S">Agregar a la factura</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="img/galleta.final.jpg" alt="img.jpeg" class="interactive-image">
+                    <div class="product-info">
+                        <span class="product-name">Chocolat Chip </span>
+                        <span class="product-price">$0.75</span>
+                        <button class="add-to-cart" data-price="0.75">
+                            <p class="S">Agregar a la factura</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div id="alert-container" class="custom-alert">
+                    <p id="alert-message"></p>
+                    <button onclick="hideAlert()">OK</button>
+                </div>
+
+              
+    <div id="invoice">
+        <h2>Factura</h2>
+        <p class="E">Fecha: <span id="invoice-date"></span></p>
+        <p class="E">Nombre: <input class="input" type="text" id="invoice-customer-name" name="to_name"
+                placeholder="Ingrese su nombre"></p>
+        <p class="E">Correo electrónico:<input class="input" type="text" name="to_email" id="to_email"
+                placeholder="Ingrese su correo"></p>
+        <p class="E">Dirección: <input class="input" type="text" id="invoice-customer-address" placeholder="Ingrese su dirección">
+        </p>
+        <h3>Detalles del Pedido</h3>
+        <ul class="F" id="invoice-items" data-name="invoice-items"></ul>
+        <p class="E">Total: $<span id="invoice-total" data-name="total" class="invoice-total">0</span></p>
+       <!-- Botón de vaciar carrito y Enviar factura por correo -->
+        <div class="Gap">
+        <button class="C" id="send-invoice-button">Enviar Factura</button>
+        <button class="C" id="clear-cart-button" class="clear-cart">Vaciar Carrito</button>
+        </div>
+       
+    </div>
+                
+
+               
+            </section>
+        </main>
+    </div>
+
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('mlCa6J9nAD2QqeHN7')
+        </script>
+
+        <script src="JS/FacturaEJE.js"></script>
+        <footer>           
+            <div class="links">
+            <a href="https://www.instagram.com/frozen_sweet01?igsh=aDhncTdqMnU1bzl2" class="social-instagram"><img src="img/ig.png" alt="ig"></a>
+            <a href="https://wa.me/50371386706" class="social-what"><img src="img/wt.png" alt="what"></a>
+            <a href="https://www.facebook.com/profile.php?id=61559965144954&mibextid=ZbWKwL" class="social-fb"><img src="img/face.png" alt="fb"></a>
+            </div>
+            <div class="contacto">
+                <center><p>Copyright© 2024 Frozen sweet drink.</p></center>
+                <center><p>Email:frozensweetdrink@gmail.com</p></center>
+                <center><p>Teléfono:7138 6706</p></center>
+        </div>
+        </footer>
+</body>
+
+</html>

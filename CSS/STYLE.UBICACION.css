@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-size: cover;
+    background-color: rgb(250, 224, 228);
+}
+
+header {
+    display: flex;
+    height: 70px;
+    background-color: rgb(252, 223, 231);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    height: flex;
+    align-items: center;
+}
+
+.img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    max-width: 100%;
+    margin: auto;
+    background-color: pink;
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+header {
+    background-color: rgb(255, 178, 191);
+    color: rgb(207, 40, 90);
+    padding: 10px 0;
+}
+
+/* Estructura de menú horizontal */
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-horizontal > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: rgb(207, 40, 90);
+    text-decoration: none;
+}
+
+.menu-horizontal > li:hover {
+    background-color: #ff9da1;
+}
+
+/* Estructura de menú vertical */
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100px;
+    background-color: rgb(252, 223, 231);
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+    width: 1000px;
+}
+
+.menu-vertical li:hover {
+    background-color: rgb(252, 223, 231);
+}
+
+.menu-vertical li a {
+    display: block;
+    color: rgb(207, 40, 90);
+    padding: 15px 15px 15px;
+}
+
+/* Estilos para el contenedor del mapa */
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    height: 0;
+    padding-bottom: 56.25%; /* Mantener una relación de aspecto 16:9 */
+    position: relative;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: rgb(207, 40, 90);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+}
+
+.contacto {
+    text-align: center;
+}
+
+.contacto p {
+    margin: 5px 0;
+}
+
+.compras {
+    width: 320px;
+}
+
+/* Media Queries para hacer el diseño responsivo */
+
+/* Para pantallas menores de 768px (tabletas y móviles en paisaje) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-horizontal > li > a {
+        padding: 10px 15px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .compras {
+        width: 100%; /* Se expande en pantallas más pequeñas */
+        max-width: 320px; /* Mantiene un ancho máximo */
+    }
+}
+
+/* Para pantallas menores de 480px (móviles pequeños) */
+@media (max-width: 480px) {
+    nav {
+        font-size: 14px;
+    }
+
+    .menu-horizontal > li > a {
+        padding: 8px 10px;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .compras {
+        width: 100%; /* Se expande completamente en móviles pequeños */
+    }
+}
